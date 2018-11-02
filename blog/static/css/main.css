@@ -1,0 +1,51 @@
+a:hover {
+	text-decoration-line: none;
+}
+.bglogo {
+	padding: 20px;
+}
+.bgform {
+	background: #0072b9;
+	padding-bottom: 100px;
+	padding-top: 10px;
+}
+.bgsteps {
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+legend {
+	color: #ffffff;
+	padding: 15px;
+}
+
+.material-icons.blue600 { 
+	color: #669df0;
+	padding-top: 20px;
+}
+.material-icons.md-100 { 
+	font-size: 100px;
+}
+strong {
+	    font-size: 32px;
+	    padding-bottom: 10px;
+	    color: #669df0;
+}
+.cap_main {
+	font-size: 22px;
+}
+
+
+#oblako {
+	background-image: url(img/oblako.png); 
+    background-position: left bottom; 
+    background-repeat: repeat-x; 
+	height: 90px;
+	width: 100%;
+	margin-top: -70px;
+}
+
+h2 {
+font-family: 'Yanone Kaffeesatz', sans-serif;
+margin-top: 20px;
+}

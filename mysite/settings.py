@@ -120,3 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'mailreq@mail.ru'
+EMAIL_HOST_PASSWORD = 'Ghj100mail'
+DEFAULT_FROM_EMAIL = 'mailreq@mail.ru'
+DEFAULT_TO_EMAIL = 'redvoknes@gmail.com'

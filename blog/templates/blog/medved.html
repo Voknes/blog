@@ -1,0 +1,155 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.png">
+	<title>Сибирский медведь</title>
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <form method="POST" class="post-form" action="../success">{% csrf_token %}
+        <input id="email" type="text" name="email">
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46364067 = new Ya.Metrika({
+                    id:46364067,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46364067?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div id="page-preloader"><span class="spinner"></span></div>
+
+<div class="container bglogo">
+  <div class="row">
+    <div class="col-md-2 text-center">
+      <img src='{% static "img/logo.png" %}'>
+    </div>
+    <div class="col-md-10">
+  <h2>Интернет в частный дом по выгодным условиям!<br>г.Новосибирск, г.Бердск</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bgform">
+  <form action="mail.php" method="POST">
+    <div class="row">
+      <div class="col-md-4 text-center mx-auto">
+      <legend>Заявка на подключение</legend>
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" id="address" name="user_address" placeholder="Адрес подключения">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" id="phone" name="user_phone" placeholder="Телефон" required>
+        </div>
+        
+        <button type="submit"  class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">Отправить заявку</button>
+      </div>  
+    </div>          
+  </form>
+</div>
+
+<div id="oblako"></div>
+
+<div class="container"><br>
+<p class="cap_main text-center">Тарифы</p>
+<div class="card-deck p-4">
+  <div class="card">
+    <img class="card-img-top" src='{% static "img/black_60.jpg" %}'>
+    <div class="card-body">
+      <h4 class="card-title">от 599 руб/мес до 100 Мбит/с</h4>
+      <p class="card-text">Комфортный интернет для просмотра онлайн-трансляций, видео в высоком качестве, работы на нескольких устройствах и цифровое телевидение*.</p>
+    </div>
+<!--     <div class="card-footer">
+      <p class="text-muted card-text"></p>
+    </div> -->
+  </div>
+</div>
+</div>
+
+<div class="container bgsteps">
+  <div class="row">
+    <div class="col text-center">
+    <p class="cap_main">Что произойдёт после заявки</p>
+      <div class="col-md-4 mx-auto">
+        <i class="material-icons md-100 blue600">headset_mic</i><strong>ШАГ #1</strong></br><span>Звонок менеджера</span>
+      </div>
+      <div class="col-md-4 mx-auto">
+        <i class="material-icons md-100 blue600">router</i><strong>ШАГ #2</strong></br><span>Подключение</span>
+      </div>
+      <div class="col-md-4 mx-auto">
+        <i class="material-icons md-100 blue600">payment</i><strong>ШАГ #3</strong></br><span>Оплата</span>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+<div class="card-footer">
+<p align="justify" class="text-muted card-text">*Цифровое телевидение предоставляется при наличии технической возможности. На тарифном плане Стартовый и Базовый телевидение предоставляется в рамках акции на 3 месяца с момента подключения. На тарифном плане Средний и Максимальный телевидение вещается без ограничений. Возможны ограничения скорости связанные с технологией подключения или оборудованием абонента. Условия подключения уточняйте у менеджера по телефону.
+</p>
+<a target="_blank" class="p_conf" href="http://sb117.ru/docs.php">Политика конфиденциальности</a>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="text-center">
+      <img src='{% static "img/25.svg" %}'>
+    </div>
+
+
+      
+
+  </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src='{% static "js/jquery.maskedinput.min.js" %}'></script>
+<script>
+      $(document).ready(function() {
+        $("#phone").mask("+7(999)9999999");
+      });
+</script>	
+<script src="https://moclients.com/js/2885.js"></script>
+
+</body>
+</html>

@@ -3,6 +3,21 @@ from .models import Post
 from django.utils import timezone
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.http import HttpResponse
+import django
+from django.conf import settings
+from django.core.mail import send_mail
+
+def success(request):
+    email = request.POST.get('email')
+    # data = """Oppaapa"""
+    send_mail('Welcome!', email, 'mailreq@mail.ru', ['redvoknes@gmail.com'], fail_silently=False)
+    return render(request, 'blog/success.html')
+
+
+
+def medved(request):
+    return render(request, 'blog/medved.html', {})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
