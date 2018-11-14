@@ -14,7 +14,8 @@ def success(request):
     send_mail('Welcome!', email, 'mailreq@mail.ru', ['redvoknes@gmail.com'], fail_silently=False)
     return render(request, 'blog/success.html')
 
-
+def mts(request):
+    return render(request, 'blog/mts.html', {})
 
 def medved(request):
     return render(request, 'blog/medved.html', {})

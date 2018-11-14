@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>МТС</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+</head>
+<div id="grid">
+
+    <header>
+        <h2>Интернет и ТВ для дома от МТС</h2>
+        <h1 class="header_text"><span>Отличное качество</span><span class="br">за малые деньги</span></h1>
+        <h2>100 Мбит/с за 400 руб/мес*</h2>
+        <span class="per20">*с учетом возврата 20% для абонентов мобильного МТС</span>
+    </header>
+    <footer>
+     <h3>Оставьте заявку на<span class="br">подключение</span></h3> 
+<form action="/" method="post">
+    
+  <div class="field-wrap">
+  <label for="address">
+    Введите адрес
+  </label>
+  <input type="text" name="address">
+</div>
+
+<div class="field-wrap">
+  <label for="tel">
+    Телефон
+  </label>
+  <input type="tel" name="tel" id="" required placeholder="">
+</div>
+
+
+<button type="submit" class="button">Отправить</button>
+
+</form>
+
+
+    </footer>
+    <aside class="left-sidebar">
+      <h1 class="t400">100<span>за</span>400</h1>
+      <p>Безлимитный интернет по низкой цене со скоростью 100 Мбит/с</p>
+      <button type="button" class="button">Подключить</button>
+    </aside>
+
+    <main>
+        <h1 class="t560">Интернет<span>+</span>ТВ</h1>
+      <p>Скорость 100 Мбит/с и более 120 каналов.</p>
+      <p>Всего за <span>560</span> руб/мес</p>
+      <button type="button" class="button">Подключить</button>
+    </main>
+
+    <aside class="right-sidebar">
+      <h1 class="t400">50<span>за</span>320</h1>
+      <p>Для тех, кому не нужно много. Скорость интернета 50 Мбит/с</p>
+      <button type="button" class="button">Подключить</button>
+    </aside>
+  </div>
+</body>
+</html>

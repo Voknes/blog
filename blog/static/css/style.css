@@ -1,0 +1,184 @@
+
+{% load static %}
+
+* {margin:0; padding:0;}
+
+body { padding:2vh; font-family: 'PT Sans', sans-serif;}
+
+header, main, aside, footer {padding:30px; background-color: #EB1E25;}
+ 
+header				  {grid-area:header;}
+main 					  {grid-area:main;}
+aside.left-sidebar  {grid-area:left-sidebar;}
+aside.right-sidebar {grid-area:right-sidebar;}
+footer 				  {grid-area:footer;}
+
+#grid {
+	margin:0 auto;
+	min-height: 96vh;
+	display:grid;
+  grid-gap:2vh;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+ 	grid-template-areas:"header header footer"
+                      "left-sidebar  main right-sidebar";          
+}
+
+
+
+@media only screen and (max-width:750px) 
+{
+	#grid {
+    grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr;
+		grid-template-areas: "header"
+							            "footer"
+                        	"main"
+                        	"left-sidebar"
+                        	"right-sidebar";
+   }              
+                        
+}
+
+.header_text {
+  padding-top: 20px;
+}
+
+h2 {
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 4vh;
+  }
+
+.mbit {
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 4vh;
+  }
+
+.per20 {
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  display: block;
+  margin-top: 20px;
+  font-size: 1.5vh;
+  }
+
+h1 span {
+  color: #faed37;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 7.5vh;
+  }
+
+.br {
+  float: left;
+  width: 100%;
+  margin-top: -15px;
+  }
+  
+header {
+  padding-left: 40px;
+  background-color: #EB1E25;
+  background-image: url(../img/table.png);
+  background-position-x: 90%;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  background-size: 28%;
+  }
+  
+
+  input {
+    margin: 0 auto;
+    font-size: 22px;
+    display: block;
+    width: 80%;
+    height: 100%;
+    padding: 10px 10px;
+    background: none;
+    background-image: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 0;
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  input:focus {
+    outline: 0;
+    border-color: #faed37;
+  }
+  h3 {
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h3 .br {
+    float: left;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    }
+
+  button {
+    padding: 10px 0;
+    border-width: 0;
+    border: 2px solid white;
+    display: block;
+    width: 15vh;
+    margin: 25px auto 0;
+    background: none;
+    color: #ffffff;
+    font-size: 1.8vh;
+    outline: none;
+    text-transform: uppercase;
+  }
+  button:focus {
+    outline: 0;
+    color: #faed37;
+  }
+  button:hover {
+    outline: 0;
+    border-color: #faed37;
+  }
+  label {
+    margin-left: 25px;
+    color: #faed37;
+    font-size: 2.5vh;
+  }
+  .t400 {
+    font-size: 11vh;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+  }
+  .t400 span {
+    color: #faed37;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15vh;
+    padding-bottom: 5px;
+  }
+
+p {
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3vh;
+  }
+
+  .t560 {
+    font-size: 8vh;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .t560 span {
+    color: #faed37;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13vh;
+    position: relative; /* Относительное позиционирование */ 
+    top: 12px;
+  }
+  p span {
+    color: #faed37;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 5vh;
+    font-weight: 600;
+  }
